@@ -1,5 +1,8 @@
 'use client'
 import React, { useState } from 'react';
+import SecureLogo from './secure-logo';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/16/solid';
 // components/SignupForm.js
 // import { useState } from 'react';
 
@@ -29,9 +32,10 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className='bg-blue-500 w-full text-center'><SecureLogo/></div>
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up with SecureExchange</h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -88,6 +92,13 @@ const SignupForm = () => {
               Sign Up
             </button>
           </div>
+          <Link
+            href="/login"
+            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+          >
+            <span>Alreat have an Account? Login</span> 
+            <ArrowRightIcon className="w-5 md:w-6" />
+          </Link>
         </form>
         <div className="flex items-center justify-between">
           <span className="border-t border-gray-300 w-full"></span>

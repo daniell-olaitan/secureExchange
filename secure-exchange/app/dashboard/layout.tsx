@@ -8,11 +8,11 @@ export default function Layout({
     children: React.ReactNode;
 }){
     return(
-        <div className='flex h-screen flex-col md:flex-col md:overflow-hidden text-black-400'>
-            <div className='flex-none bg-white md:w-100 md:h-32'>
+        <div className='flex h-screen flex-col md:flex-row md:overflow-hidden bg-white'>
+            <div className='w-full flex-none md:w-64'>
                 <HomeNav/>
             </div>
-            <div className='flex-grow p-6 md:overflow-y-auto md:p-12 bg-gray-500'>{children}</div>
+            <div className='flex-grow p-6 md:overflow-y-auto md:p-12 text-black'>{children}</div>
         </div>
     )
 }
